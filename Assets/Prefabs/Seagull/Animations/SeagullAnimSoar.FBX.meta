@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: 6310a0d74ef6cde48b73e65ef7f6d6b7
+timeCreated: 1516194039
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Beak
+    100002: Breast
+    100004: Center
+    100006: Head
+    100008: L_Breast
+    100010: L_Eye
+    100012: L_Finger.001
+    100014: L_Finger.003
+    100016: L_Finger.004
+    100018: L_Finger.005
+    100020: L_Finger.006
+    100022: L_Finger.007
+    100024: L_Finger.008
+    100026: L_Foot
+    100028: L_Knee
+    100030: L_LowerEyelids
+    100032: L_TailFether.2
+    100034: L_Thigh
+    100036: L_UpperEyelids
+    100038: L_Wing.001
+    100040: L_Wing.002
+    100042: L_Wing.003
+    100044: L_Wing.004
+    100046: L_Wing.006
+    100048: L_Wing.007
+    100050: L_Wing.008
+    100052: L_Wing.009
+    100054: Neck.1
+    100056: Neck.2
+    100058: Neck.3
+    100060: Pelvis
+    100062: R_Breast
+    100064: R_Eye
+    100066: R_Finger.001
+    100068: R_Finger.003
+    100070: R_Finger.004
+    100072: R_Finger.005
+    100074: R_Finger.006
+    100076: R_Finger.007
+    100078: R_Finger.008
+    100080: R_Foot
+    100082: R_Knee
+    100084: R_Lower_Eyelids
+    100086: R_TailFether.2
+    100088: R_Thigh
+    100090: R_UpperEyelids
+    100092: R_Wing.001
+    100094: R_Wing.002
+    100096: R_Wing.003
+    100098: R_Wing.004
+    100100: R_Wing.006
+    100102: R_Wing.007
+    100104: R_Wing.008
+    100106: R_Wing.009
+    100108: Root
+    100110: //RootNode
+    100112: SeagullDummy
+    100114: Spine.1
+    100116: Spine.2
+    100118: Tail.1
+    100120: Tail.2
+    100122: tongue
+    400000: Beak
+    400002: Breast
+    400004: Center
+    400006: Head
+    400008: L_Breast
+    400010: L_Eye
+    400012: L_Finger.001
+    400014: L_Finger.003
+    400016: L_Finger.004
+    400018: L_Finger.005
+    400020: L_Finger.006
+    400022: L_Finger.007
+    400024: L_Finger.008
+    400026: L_Foot
+    400028: L_Knee
+    400030: L_LowerEyelids
+    400032: L_TailFether.2
+    400034: L_Thigh
+    400036: L_UpperEyelids
+    400038: L_Wing.001
+    400040: L_Wing.002
+    400042: L_Wing.003
+    400044: L_Wing.004
+    400046: L_Wing.006
+    400048: L_Wing.007
+    400050: L_Wing.008
+    400052: L_Wing.009
+    400054: Neck.1
+    400056: Neck.2
+    400058: Neck.3
+    400060: Pelvis
+    400062: R_Breast
+    400064: R_Eye
+    400066: R_Finger.001
+    400068: R_Finger.003
+    400070: R_Finger.004
+    400072: R_Finger.005
+    400074: R_Finger.006
+    400076: R_Finger.007
+    400078: R_Finger.008
+    400080: R_Foot
+    400082: R_Knee
+    400084: R_Lower_Eyelids
+    400086: R_TailFether.2
+    400088: R_Thigh
+    400090: R_UpperEyelids
+    400092: R_Wing.001
+    400094: R_Wing.002
+    400096: R_Wing.003
+    400098: R_Wing.004
+    400100: R_Wing.006
+    400102: R_Wing.007
+    400104: R_Wing.008
+    400106: R_Wing.009
+    400108: Root
+    400110: //RootNode
+    400112: SeagullDummy
+    400114: Spine.1
+    400116: Spine.2
+    400118: Tail.1
+    400120: Tail.2
+    400122: tongue
+    7400000: Soar
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Soar
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Center
+        weight: 1
+      - path: Root/Center/Pelvis
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh/L_Knee
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh/L_Knee/L_Foot
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh/L_Knee/L_Foot/L_Finger.001
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh/L_Knee/L_Foot/L_Finger.003
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh/L_Knee/L_Foot/L_Finger.003/L_Finger.004
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh/L_Knee/L_Foot/L_Finger.005
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh/L_Knee/L_Foot/L_Finger.005/L_Finger.006
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh/L_Knee/L_Foot/L_Finger.007
+        weight: 1
+      - path: Root/Center/Pelvis/L_Thigh/L_Knee/L_Foot/L_Finger.007/L_Finger.008
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh/R_Knee
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh/R_Knee/R_Foot
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh/R_Knee/R_Foot/R_Finger.001
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh/R_Knee/R_Foot/R_Finger.003
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh/R_Knee/R_Foot/R_Finger.003/R_Finger.004
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh/R_Knee/R_Foot/R_Finger.005
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh/R_Knee/R_Foot/R_Finger.005/R_Finger.006
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh/R_Knee/R_Foot/R_Finger.007
+        weight: 1
+      - path: Root/Center/Pelvis/R_Thigh/R_Knee/R_Foot/R_Finger.007/R_Finger.008
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Breast
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/L_Breast
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/L_Wing.001
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/L_Wing.001/L_Wing.002
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/L_Wing.001/L_Wing.002/L_Wing.003
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/L_Wing.001/L_Wing.002/L_Wing.003/L_Wing.004
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/L_Wing.001/L_Wing.002/L_Wing.006
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/L_Wing.001/L_Wing.002/L_Wing.006/L_Wing.007
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/L_Wing.001/L_Wing.008
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/L_Wing.001/L_Wing.008/L_Wing.009
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3/Head
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3/Head/Beak
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3/Head/Beak/tongue
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3/Head/L_Eye
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3/Head/L_LowerEyelids
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3/Head/L_UpperEyelids
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3/Head/R_Eye
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3/Head/R_Lower_Eyelids
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Neck.3/Head/R_UpperEyelids
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/R_Breast
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/R_Wing.001
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/R_Wing.001/R_Wing.002
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/R_Wing.001/R_Wing.002/R_Wing.003
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/R_Wing.001/R_Wing.002/R_Wing.003/R_Wing.004
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/R_Wing.001/R_Wing.002/R_Wing.006
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/R_Wing.001/R_Wing.002/R_Wing.006/R_Wing.007
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/R_Wing.001/R_Wing.008
+        weight: 1
+      - path: Root/Center/Pelvis/Spine.1/Spine.2/R_Wing.001/R_Wing.008/R_Wing.009
+        weight: 1
+      - path: Root/Center/Pelvis/Tail.1
+        weight: 1
+      - path: Root/Center/Pelvis/Tail.1/Tail.2
+        weight: 1
+      - path: Root/Center/Pelvis/Tail.1/Tail.2/L_TailFether.2
+        weight: 1
+      - path: Root/Center/Pelvis/Tail.1/Tail.2/R_TailFether.2
+        weight: 1
+      - path: SeagullDummy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: Root
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
