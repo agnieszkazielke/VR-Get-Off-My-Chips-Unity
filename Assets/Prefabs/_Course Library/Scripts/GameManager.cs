@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
+using System.IO;
 
 
 public class GameManager : MonoBehaviour
@@ -14,6 +15,11 @@ public class GameManager : MonoBehaviour
 
     private int startScore = 5;
     public int score;
+
+
+
+    public int seagullScore = 0;
+    public int topScore;
 
 
     // location of the chips
@@ -54,9 +60,17 @@ public class GameManager : MonoBehaviour
     public GameObject gameMenu;
     public GameObject mainMenuText;
     public GameObject gameOverText;
+    public GameObject mainMenuButton;
     public GameObject startGameButton;
     public GameObject goBackButton;
+    public GameObject blurbTextMain;
+    public GameObject blurbTextGameOver;
+
+
     public GameObject massAttack;
+    public GameObject seagullScoreText;
+    public GameObject topScoreText;
+
 
     public XRBaseController rightMenuController;
 
@@ -88,7 +102,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-
+        LoadTopScore();
     }
 
     private void Start()
@@ -99,6 +113,11 @@ public class GameManager : MonoBehaviour
         
         if (rightGameController == null)
             Debug.LogWarning("Reference to the Controller is not set in the Inspector window, this behavior will not be able to send haptics. Drag a reference to the controller that you want to send haptics to.", this);
+
+        // Load top score
+
+        topScoreText.GetComponent<TMPro.TextMeshProUGUI>().text = "Top Score: " + topScore.ToString();
+
 
     }
 
@@ -138,28 +157,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        // Actions for if reloading a new game
-        StopAllCoroutines();
 
-        // Destroy any seagulls in the scene
-
-        GameObject[] birds = GameObject.FindGameObjectsWithTag("Seagull");
-        foreach (var bird in birds)
-        {
-            Destroy(bird);
-        }
-       
-        // Manage prior mass attack 
-        if (massAttackOn)
-        {
-            EndMassAttack();
-
-        }
-
-        else
-        {
-            Time.timeScale = 1;
-        }
 
         // General
         
@@ -167,7 +165,13 @@ public class GameManager : MonoBehaviour
         score = startScore;
         difficultyCounter = 0;
         spawnRate = spawnRateEasy;
+        Time.timeScale = 1;
+
+
         gameMenu.gameObject.SetActive(false);
+
+        seagullScoreText.gameObject.SetActive(true);
+
         rightMenuController.gameObject.SetActive(false);
         rightGameController.gameObject.SetActive(true);
         righHandRay.gameObject.SetActive(false);
@@ -233,9 +237,14 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
+        seagullScoreText.gameObject.SetActive(false);
         gameMenu.gameObject.SetActive(true);
-        startGameButton.gameObject.SetActive(true);
+        
+
+        startGameButton.gameObject.SetActive(false);
+        mainMenuButton.gameObject.SetActive(true);
         goBackButton.gameObject.SetActive(true);
+        blurbTextMain.gameObject.SetActive(false);
 
 
         rightMenuController.gameObject.SetActive(true);
@@ -253,6 +262,8 @@ public class GameManager : MonoBehaviour
     {
         
         gameMenu.gameObject.SetActive(false);
+        seagullScoreText.gameObject.SetActive(true);
+
         rightMenuController.gameObject.SetActive(false);
         rightGameController.gameObject.SetActive(true);
         righHandRay.gameObject.SetActive(false);
@@ -272,29 +283,21 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // test the gameover
-    private void GameOver()
-    {
-        isGameActive = false;
-        gameMenu.gameObject.SetActive(true);
-        goBackButton.gameObject.SetActive(false);
-        startGameButton.gameObject.SetActive(true);
-        mainMenuText.gameObject.SetActive(false);
-        gameOverText.gameObject.SetActive(true);
-
-        rightMenuController.gameObject.SetActive(true);
-        rightGameController.gameObject.SetActive(false);
-        righHandRay.gameObject.SetActive(true);
-
-        massAttackSound.GetComponent<AudioSource>().Stop();
-    }
+    
 
 
 
 
 // Update is called once per frame
-void Update()
+    void Update()
     {
+
+        // Display Seagull Score
+
+        seagullScoreText.GetComponent<TMPro.TextMeshProUGUI>().text = "Seagulls: " + seagullScore.ToString();
+
+
+
         // Difficulty level increase rules
         if (isGameActive)
         {
@@ -338,6 +341,70 @@ void Update()
 
 
 
+    }
+
+
+    // test the gameover
+    private void GameOver()
+    {
+        isGameActive = false;
+
+
+        LoadTopScore();
+
+        if (seagullScore > topScore)
+        {
+            SaveTopScore();
+        }
+
+        seagullScoreText.gameObject.SetActive(false);
+        gameMenu.gameObject.SetActive(true);
+        goBackButton.gameObject.SetActive(false);
+        startGameButton.gameObject.SetActive(false);
+        mainMenuText.gameObject.SetActive(false);
+        gameOverText.gameObject.SetActive(true);
+        mainMenuButton.gameObject.SetActive(true);
+        topScoreText.gameObject.SetActive(false);
+        blurbTextMain.gameObject.SetActive(false);
+        blurbTextGameOver.gameObject.SetActive(true);
+
+
+        rightMenuController.gameObject.SetActive(true);
+        rightGameController.gameObject.SetActive(false);
+        righHandRay.gameObject.SetActive(true);
+
+        massAttackSound.GetComponent<AudioSource>().Stop();
+    }
+
+    [System.Serializable]
+    class SaveData
+
+    {
+        public int topScore;
+    }
+
+
+    public void SaveTopScore()
+    {
+        SaveData data = new SaveData();
+        data.topScore = seagullScore;
+
+        string json = JsonUtility.ToJson(data);
+
+        File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+    }
+
+    public void LoadTopScore()
+    {
+        string path = Application.persistentDataPath + "/savefile.json";
+
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            SaveData data = JsonUtility.FromJson<SaveData>(json);
+
+            topScore = data.topScore;
+        }
     }
 
 

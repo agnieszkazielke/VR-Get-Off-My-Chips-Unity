@@ -96,7 +96,7 @@ public class Seagull : MonoBehaviour
 
 
 
-        else if (other.gameObject.CompareTag("Bat"))
+        else if (other.gameObject.CompareTag("Bat") && batContact == false)
         {
             playerContact = true;
             // ACTION - just put fly away function here? TEST
@@ -115,6 +115,9 @@ public class Seagull : MonoBehaviour
             gameManager.SendHapticsRH();
 
             Debug.Log("Projectile hit");
+
+            gameManager.seagullScore = gameManager.seagullScore + 1;
+
         }
 
 
